@@ -43,26 +43,25 @@ pip install -r requirements.txt
 
 Configuration
 
-    Copy the example environment file and update the values:
+Copy the example environment file and update the values:
 ```bash
-
 cp .env.example .env
 ```
 
 Update the .env file with your desired configuration settings, including the MongoDB connection details.
 
 Usage
+Start the application server:
 
-    Start the application server:
 ```bash
 python3 main.py
 ```
 
-    The API should now be accessible at `http://localhost:YourPort`.
+The API should now be accessible at `http://localhost:YourPort`.
 
-    Open your web browser and navigate to http://localhost:YourPort/docs to view the automatically generated API documentation.
+Open your web browser and navigate to http://localhost:YourPort/docs to view the automatically generated API documentation.
 
-Docker
+## Docker
 
 You can also run the application using Docker. Make sure you have Docker installed and running on your machine.
 
