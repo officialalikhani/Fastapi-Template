@@ -19,45 +19,44 @@ This repository serves as a template for building FastAPI applications with Mong
 
 ## Installation
 
-1. Clone this repository:
+Clone this repository:
 
-   ```bash
-   git clone https://github.com/officialalikhani/Fastapi-Template.git
+```bash
+git clone https://github.com/officialalikhani/Fastapi-Template.git
 
 Change into the project directory:
 
-    cd your-fastapi-project
+cd your-fastapi-project
 ```
 
 Create a virtual environment (optional but recommended):
 ```bash
 
-    python3 -m venv .venv
-    source .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 ```
 
 Install the dependencies:
 ```bash
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 Configuration
 
     Copy the example environment file and update the values:
-    ```bash
+```bash
 
-    cp .env.example .env
-    ```
+cp .env.example .env
+```
 
-    Update the .env file with your desired configuration settings, including the MongoDB connection details.
+Update the .env file with your desired configuration settings, including the MongoDB connection details.
 
 Usage
 
     Start the application server:
-    ```bash
-
-    python3 main.py
-    ```
+```bash
+python3 main.py
+```
 
     The API should now be accessible at `http://localhost:YourPort`.
 
@@ -68,15 +67,15 @@ Docker
 You can also run the application using Docker. Make sure you have Docker installed and running on your machine.
 
 Build the Docker image:
-    ```bash
+```bash
 
-    docker-compose build
+docker-compose build
 ```
 
 Start the Docker containers:
 ```bash
 
-    docker-compose up -d
+docker-compose up -d
 ```
 
 Contributing
