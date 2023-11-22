@@ -5,6 +5,7 @@ from jose import JWTError, jwt
 from passlib.context import CryptContext
 from database.main import MongoDb
 from models.base_model import *
+
 mg = MongoDb()
 SECRET_KEY = "# openssl rand -hex 32"
 ALGORITHM = "HS256"

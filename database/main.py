@@ -1,7 +1,9 @@
 import pymongo
 from dotenv import load_dotenv
 import os
+
 load_dotenv()
+
 
 class MongoDb:
     def __init__(self):
@@ -16,7 +18,7 @@ class MongoDb:
     def select_user_by(self, username):
         user = self.MyCollection.find_one({f"{username}.username": f"{username}"})
         return user
-    
+
     def user_mongo(self, user, userhash, role):
         general = {
             user: {

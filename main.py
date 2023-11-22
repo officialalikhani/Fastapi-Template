@@ -8,6 +8,7 @@ from routes.sample_route import router as routes_sample
 import logging
 from logging.handlers import RotatingFileHandler
 import uvicorn
+
 mg = MongoDb()
 app = FastAPI()
 app.add_middleware(
@@ -26,6 +27,8 @@ logger.addHandler(handler)
 
 app.include_router(routes_auth)
 app.include_router(routes_sample)
+
+
 @app.exception_handler(HTTPException)
 async def handle_http_exception(request, exc):
     return JSONResponse(
@@ -33,8 +36,6 @@ async def handle_http_exception(request, exc):
         content={"success": False, "message": "Not authenticated", "data": ""},
     )
 
+
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port="Your-Port", workers="",reload=True)
-
-
-
+    uvicorn.run("main:app", host="0.0.0.0", port="Your-Port", workers="", reload=True)

@@ -1,12 +1,14 @@
-from fastapi import Depends, APIRouter,Response
+from fastapi import Depends, APIRouter, Response
 from security.auth import *
 from database.main import MongoDb
 from fastapi.security import OAuth2PasswordRequestForm
 import traceback
+
 mg = MongoDb()
 
 
 router = APIRouter(tags=["AUTH"])
+
 
 @router.post("/token", response_model=Token)
 async def login_for_access_token(form_data: OAuth2PasswordRequestForm = Depends()):
